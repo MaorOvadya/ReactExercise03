@@ -19,12 +19,15 @@ export default class ChallengeTwo extends Component {
   //componentDidMount will execute when the page has loaded (this will only run once)
   componentDidMount() {
     //display the student list after 3 seconds
+    setTimeout(() => {
+      this.state({arr: studentList})
+    },3000)
   }
 
   //random button handler
   randomize = () => {
     //shuffle the array and set the state
-
+   
   }
 
   render() {
@@ -34,6 +37,7 @@ export default class ChallengeTwo extends Component {
         <div className='msg'>
           <ul>
             {/* display the list of students by iterating through the array */}
+            {this.state}
           </ul>
         </div>
         <button className='btn large'>Randomize</button>
